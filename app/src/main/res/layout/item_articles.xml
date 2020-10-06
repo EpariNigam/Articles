@@ -12,6 +12,7 @@
             android:id="@+id/ivUser"
             android:layout_width="60dp"
             android:layout_height="60dp"
+            android:scaleType="centerCrop"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:src="@mipmap/ic_launcher" />
@@ -20,10 +21,10 @@
             android:id="@+id/tvName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toStartOf="@id/tvTime"
             app:layout_constraintStart_toEndOf="@id/ivUser"
@@ -34,10 +35,10 @@
             android:id="@+id/tvDesignation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:textColor="@android:color/black"
-            android:textSize="20sp"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@id/tvTime"
             app:layout_constraintStart_toEndOf="@id/ivUser"
             app:layout_constraintTop_toBottomOf="@id/tvName"
@@ -47,7 +48,7 @@
             android:id="@+id/tvTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="14sp"
+            android:textSize="13sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="1 min" />
@@ -64,6 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="16dp"
+            android:scaleType="centerCrop"
             app:layout_constraintDimensionRatio="H,3:2"
             app:layout_constraintTop_toBottomOf="@id/barrier" />
 
@@ -73,7 +75,32 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:textColor="@android:color/black"
+            android:textSize="15sp"
             app:layout_constraintTop_toBottomOf="@id/ivArticleImage"
             tools:text="Content" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLikes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            tools:text="4.5K Likes" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvComments"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvContent"
+            tools:text="30K Comments" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
